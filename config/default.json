@@ -1,3 +1,12 @@
 {
-  "urlToPing": "http://coderuse.com"
+  "urlToPing": "http://coderuse.com",
+  "interval": "every 2 mins",
+  "hostConf": {
+    "name": "dev",
+    "ip": "127.0.0.1"
+  },
+  "firebaseConfig": {
+    "serviceAccount": "./config/serviceAccountCredentials.json",
+    "databaseURL": "https://xxx.firebaseio.com/"
+  }
 }

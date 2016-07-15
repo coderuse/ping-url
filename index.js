@@ -4,6 +4,7 @@
   var later = require('later');
   var config = require('config');
   var request = require('request');
+  var firebase = require("firebase");
   var rp = require('request-promise');
   var handlebars = require('handlebars');
   var htmlparser = require("htmlparser2");
@@ -109,6 +110,38 @@
     });
   }
 
-  pingUrl(urlToPing);
+  // Initialize the app with a service account, granting admin privileges
+  firebase.initializeApp(config.get('firebaseConfig'));
 
+  var host = config.get('hostConf');
+
+  // As an admin, the app has access to read and write all data, regardless of Security Rules
+  var db = firebase.database();
+  var ref = db.ref('ping-url/hosts');
+  var aliveRef = ref.child('alive');
+  aliveRef.push().set({
+    ip: host.ip,
+    hostName: host.name,
+    date: new Date()
+  });
+
+  aliveRef.on('value', function(snapshot) {
+    console.log(snapshot.val());
+    aliveRef.off();
+  }, function(errorObject) {
+    console.log('The read failed: ' + errorObject.code);
+  });
+
+  /*
+  var count = 4;
+  var sched = later.parse.text(config.get('interval'));
+  var timer = later.setInterval(function () {
+    pingUrl(urlToPing);
+    
+    count -= 1;
+    if (count < 0) {
+      timer.clear();
+    }
+  }, sched);
+  */
 }());

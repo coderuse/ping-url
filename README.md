@@ -10,20 +10,14 @@ So, ping your site from corners of the world and get the edge servers of Cloudfl
 
 To reduce the cost of buying VPS's in various places, you can use NAT-VPS's. They comes at a very cheap price. Maybe $1/annum!!!
 
-To run this, you need NodeJS installed in youru system.
+## Usage
 
-``` bash
-git clone https://github.com/coderuse/ping-url.git
+For usage please refer to the [wiki](https://github.com/coderuse/ping-url/wiki)
 
-cd ping-url && npm install
-
-# You may want to change "urlToPing" in the config/default.json
-
-node index.js
-```
+## License
 
 ```
-Copyright 2015 Arnab Das <arnab.social@live.in>
+Copyright 2016 Arnab Das <arnab.social@live.in>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

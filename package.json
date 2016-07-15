@@ -29,6 +29,7 @@
   "homepage": "https://github.com/coderuse/ping-url#readme",
   "dependencies": {
     "config": "^1.21.0",
+    "firebase": "^3.2.0",
     "handlebars": "^4.0.5",
     "htmlparser2": "^3.9.1",
     "later": "^1.2.0",

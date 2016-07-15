@@ -115,3 +115,6 @@ dist/vendor
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
+
+# Exclude the Firebase account credential
+config/serviceAccountCredentials.json
