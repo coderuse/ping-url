@@ -9,3 +9,31 @@ Now-a-days static web hosting is a very popular trend. All the pages of site bec
 So, ping your site from corners of the world and get the edge servers of Cloudflare loads the content of your site in those locations/zone and actual users of your site gets your site loaded quite fast.
 
 To reduce the cost of buying VPS's in various places, you can use NAT-VPS's. They comes at a very cheap price. Maybe $1/annum!!!
+
+To run this, you need NodeJS installed in youru system.
+
+``` bash
+git clone https://github.com/coderuse/ping-url.git
+
+cd ping-url && npm install
+
+# You may want to change "urlToPing" in the config/default.json
+
+node index.js
+```
+
+```
+Copyright 2015 Arnab Das <arnab.social@live.in>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

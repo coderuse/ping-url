@@ -1,0 +1,39 @@
+{
+  "name": "ping-url",
+  "version": "0.0.1",
+  "description": "A very simple NodeJS app to ping url at an regular interval to reduce load time for a site",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderuse/ping-url.git"
+  },
+  "keywords": [
+    "ping",
+    "cdn",
+    "ping",
+    "website",
+    "monitoring",
+    "uptime",
+    "monitoring",
+    "downtime",
+    "alerts"
+  ],
+  "author": "Arnab Das <arnab@coderuse.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/coderuse/ping-url/issues"
+  },
+  "homepage": "https://github.com/coderuse/ping-url#readme",
+  "dependencies": {
+    "config": "^1.21.0",
+    "handlebars": "^4.0.5",
+    "htmlparser2": "^3.9.1",
+    "later": "^1.2.0",
+    "mout": "^1.0.0",
+    "request": "^2.73.0",
+    "request-promise": "^3.0.0"
+  }
+}
