@@ -1,6 +1,6 @@
 {
   "name": "ping-url",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A very simple NodeJS app to ping url at an regular interval to reduce load time for a site",
   "main": "index.js",
   "scripts": {
