@@ -60,7 +60,7 @@
 
       var end = new Date().getTime();
 
-      _this._taskEnded(task.url, start, end);
+      _this._taskEnded(task.uri, start, end);
 
       if (_this._queue.length > 0) {
         _this.execNext.apply(_this);
@@ -97,10 +97,10 @@
         completed: completed
       };
     }, function() {
-      console.log('\n\n\n');
+      console.log('\n\n');
       for (var prop in loadStats) {
         if (loadStats.hasOwnProperty(prop)) {
-          //console.log(prop + ': ' + loadStats[prop].start + ', ' + loadStats[prop].end + ', ' + loadStats[prop].completed);
+          console.log(prop + ': ' + loadStats[prop].start + ', ' + loadStats[prop].end + ', ' + loadStats[prop].completed);
         }
       }
     });
