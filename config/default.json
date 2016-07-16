@@ -1,6 +1,13 @@
 {
-  "urlToPing": "http://coderuse.com",
-  "interval": "every 2 mins",
+  "urlsToPing": [{
+    "url": "http://coderuse.com",
+    "interval": "every 2 mins",
+    "intervalFormat": "text"
+  }, {
+    "url": "https://cdgrnd.com",
+    "interval": "every 2 mins",
+    "intervalFormat": "text"
+  }],
   "hostConf": {
     "name": "dev",
     "ip": "127.0.0.1"
