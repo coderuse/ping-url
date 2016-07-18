@@ -97,7 +97,7 @@
         completed: completed
       };
     }, function() {
-      console.log('\n\n');
+      console.log('\n');
       for (var prop in loadStats) {
         if (loadStats.hasOwnProperty(prop)) {
           console.log(prop + ': ' + loadStats[prop].start + ', ' + loadStats[prop].end + ', ' + loadStats[prop].completed);
@@ -145,18 +145,18 @@
     });
   };
   Ping.prototype.schedule = function() {
-    new Ping(this._conf).do();
-    /*
-    var count = 4;
-    var sched = later.parse[this.conf.intervalFormat](this.conf.interval);
+    var _this = this;
+    var count = 4319;
+    var sched = later.parse[this._conf.intervalFormat](this._conf.interval);
     var timer = later.setInterval(function() {
-      pingUrl(urlToPing);
+      console.log('Count: ' + count);
+      new Ping(_this._conf).do();
 
       count -= 1;
       if (count < 0) {
         timer.clear();
       }
-    }, sched);*/
+    }, sched);
   };
 
   var urlsToPing = config.get('urlsToPing');
